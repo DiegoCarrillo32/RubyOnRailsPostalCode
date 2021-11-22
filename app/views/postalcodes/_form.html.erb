@@ -1,0 +1,5 @@
+<%= form_tag("/postalcode/", method: "get") do %>
+  <%= label_tag(:code, "Search for:") %>
+  <%= text_field_tag(:code) %>
+  <%= submit_tag("Search") %>
+<% end %>

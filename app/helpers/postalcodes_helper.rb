@@ -1,0 +1,2 @@
+module PostalcodesHelper
+end
