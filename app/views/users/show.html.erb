@@ -1,0 +1,7 @@
+<h1>User <%=@user.username %></h1>
+
+<strong>Do you want to create a new postal code?</strong>
+<%=link_to "create postal code", new_postalcode_path %>
+
+
+<%=render 'postalcodes/table' %>

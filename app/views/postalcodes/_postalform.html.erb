@@ -1,0 +1,23 @@
+<%= form_for @postalcode do |f| %>
+  <p>
+    <%= f.label :department %><br>
+    <%= f.text_field :department %>
+  </p>
+
+  <p>
+    <%= f.label :municipality %><br>
+    <%= f.text_field :municipality %>
+  </p>
+  <p>
+    <%= f.label :postalcode %><br>
+    <%= f.text_field :postalcode %>
+  </p>
+  <p >
+    <%= f.label :neighbourhood %><br>
+    <%= f.text_field :neighbourhood %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

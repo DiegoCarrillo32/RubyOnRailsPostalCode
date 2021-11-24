@@ -1,0 +1,10 @@
+<% if @postalcode.errors.size > 0 %>
+  <div class="alert alert-danger mt-2">
+    <h4>There was a problem with your submission:</h4>
+    <ul>
+      <% @postalcode.errors.objects.each do |msg| %>
+        <li><%= msg.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<%end %>

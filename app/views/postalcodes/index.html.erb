@@ -1,22 +1,6 @@
 
-<h1>All postal codes available</h1>
 
-<table class="table">
-  <tr>
-        <th scope="col">#</th>
-        <th scope="col">Department</th>
-        <th scope="col">Municipality</th>
-        <th scope="col">Postal Code</th>
-        <th scope="col">Neighbourhood</th>
-  </tr>
- 
-  <% @postalcode.each do |postal| %>
-    <tr>
-        <td> <%=postal.id%> </td>
-        <td><%= postal.department %></td>
-        <td><%= postal.municipality %></td>
-        <td><%= postal.postalcode %></td>
-        <td><%= postal.neighbourhood %></td>
-    </tr>
-  <% end %>
-</table>
+
+
+
+<%=render 'postalcodes/table' %>

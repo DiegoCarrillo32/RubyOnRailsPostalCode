@@ -1,5 +1,7 @@
-<%= form_tag("/postalcode/", method: "get") do %>
-  <%= label_tag(:code, "Search for:") %>
-  <%= text_field_tag(:code) %>
-  <%= submit_tag("Search") %>
+<%= form_tag("/postalcode", type:"number",:method => "get", :class => "d-flex") do %>
+
+  <%= text_field_tag( :code, "", :class=>"form-control me-2") %>
+  <%= submit_tag("Search", :class=>"btn btn-outline-success") %>
+  
 <% end %>
+

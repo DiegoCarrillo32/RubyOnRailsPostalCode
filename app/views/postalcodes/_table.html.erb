@@ -1,0 +1,31 @@
+
+<h1>All postal codes available</h1>
+
+<table class="table">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Department</th>
+    <th scope="col">Municipality</th>
+    <th scope="col">Postal Code</th>
+    <th scope="col">Neighbourhood</th>
+    <th scope="col"></th>
+  </tr>
+
+  <% @postalcode.each do |postal| %>
+    <tr>
+      <td> <%=postal.id%> </td>
+      <td><%= postal.department %></td>
+      <td><%= postal.municipality %></td>
+      <td><%= postal.postalcode %></td>
+      <td><%= postal.neighbourhood %></td>
+
+      <%if @user %>
+        <td>
+          <%= link_to 'Edit', edit_postalcode_path(postal) %>
+          <%= link_to 'Delete', postalcode_path(postal), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      <%end %>
+
+    </tr>
+  <% end %>
+</table>

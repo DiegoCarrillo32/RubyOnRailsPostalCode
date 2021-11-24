@@ -1,2 +1,17 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<%= form_tag("/user", type:"number",:method => "get", :class => "") do %>
+
+  <%=label_tag "ID" %>
+  <%= text_field_tag( :id, "", :class=>"form-control me-2") %>
+
+
+  <%=label_tag "Password" %>
+  <%= text_field_tag( :password, "", :class=>"form-control me-2") %>
+
+
+
+<div class="d-flex flex-column">
+  <%= submit_tag("Log In", :class=>"btn btn-primary mt-2 ") %>
+</div>
+
+
+<% end %>

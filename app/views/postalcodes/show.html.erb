@@ -14,4 +14,13 @@
   <strong>neighbourhood:</strong>
   <%= @postalcode.neighbourhood %>
 </p>
- 
+
+<iframe
+  width="600"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-6uP7mv5jyiLK87lVND1AXNlpoNoLeOo&q=<%=@postalcode.neighbourhood %>, <%=@postalcode.department %>">
+</iframe>
