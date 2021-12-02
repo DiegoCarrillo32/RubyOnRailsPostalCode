@@ -16,7 +16,13 @@
       </ul>
       <%=render 'postalcodes/form'%>
       <div class="d-flex flex-column">
-        <%=link_to "Sing in" , '/login', :class=>"btn btn-outline-success m-1"%>
+        <%if !@user %>
+          <%=link_to "Sing in" , '/login', :class=>"btn btn-outline-success m-1"%>
+        <%end %>
+        <%if @user %>
+          <%=link_to "Sing out" , '/', :class=>"btn btn-outline-success m-1"%>
+          <%end %>
+
       </div>
 
     </div>
